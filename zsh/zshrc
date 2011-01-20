@@ -208,4 +208,8 @@ gci(){
   git commit $*
 }
 
+gpush(){
+  git push $*
+}
+
 #TODO expand this initial config ;) !
