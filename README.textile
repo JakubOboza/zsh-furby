@@ -1,0 +1,19 @@
+My zsh and emacs config
+
+bq. "furby in ya shell"
+
+h2. Setup
+
+@zsh-furby@ should work with any recent release of "zsh":http://www.zsh.org/, the minimum recommended version is 4.2.7. You can check zsh version using @print $ZSH_VERSION@
+
+h3. how to install
+
+  @git clone git@github.com:JakubOboza/zsh-furby.git@
+  and run @zsh-furby/install.sh@ it will replace if you have any .emacs and .zshrc
+
+h2. History
+  * initial commit 20/01/2011
+
+h2. TODO
+ * make space for functions and split .zshrc into logic parts
+ * add more things ;))
