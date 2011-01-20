@@ -12,6 +12,7 @@ h3. how to install
   and run @zsh-furby/install.sh@ it will replace if you have any .emacs and .zshrc
 
 h2. History
+  * i started using zsh, i base my config on config from my friend dotmariusz
   * initial commit 20/01/2011
 
 h2. TODO
