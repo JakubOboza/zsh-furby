@@ -183,4 +183,29 @@ be() {
   bundle exec $*
 }
 
+# ruby & rails
+## rake
+
+fur-spec() {
+  if [[ $* == "" ]]; then
+    bundle exec rake spec
+  else
+    bundle exec rake spec SPEC=$*
+  fi
+}
+
+# git
+
+gstat(){
+  git status $*
+}
+
+gdiff() {
+  git diff $*
+}
+
+gci(){
+  git commit $*
+}
+
 #TODO expand this initial config ;) !
