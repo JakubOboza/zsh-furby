@@ -1,16 +1,14 @@
 #!/usr/bin/env zsh
 
-[[  -f $HOME/.zshrc  ]] &
-  print "Moving ~/.zshrc to ~.zshrc.old" ; mv ~/.zshrc ~/.zshrc.old
+config_files=(zsh emacs)
 
-print "Linking zshrc to ~/.zshrc"
-ln -s `pwd`/zsh/zshrc ~/.zshrc
+for i in $config_files; do
+  [[  -f $HOME/.$i  ]] &
+  print "Moving ~/.$i to ~.$i.old"; mv ~/.$i ~/.$i.old
+  print "Linking $i to ~/.$i"
+  ln -s `pwd`/$i/$i ~/.$i
+done
 
-[[  -f $HOME/.emacs  ]] &
-  print "Moving ~/.emacs to ~.emacs.old"; mv ~/.emacs ~/.emacs.old
-
-print "Linking emacs to ~/.emacs"
-ln -s `pwd`/emacs/emacs ~/.emacs
 
 if [[ $ZSH == "" ]]; then
   print "You don't have set \$ZSH to any dir"
