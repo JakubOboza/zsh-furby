@@ -10,11 +10,10 @@ EDITOR='emacs'
 
 FURBY_MODULES=(git bundler rspec)
 
-# TODO
 # source .furby, extra config settings, variables etc.
-#if [[  -f ~/.furby  ]]; then
-#  source ~/.furby
-#done
+if [[  -f ~/.furby  ]]; then
+  source ~/.furby
+fi
 
 
 # next lets set some enviromental/shell pref stuff up
