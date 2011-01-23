@@ -1,5 +1,22 @@
 source ~/.profile
 
+# Set variables
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/mysql5/bin:$PATH
+
+PAGER='less'
+EDITOR='emacs'
+
+FURBY_MODULES=(git bundler rspec)
+
+# TODO
+# source .furby, extra config settings, variables etc.
+#if [[  -f ~/.furby  ]]; then
+#  source ~/.furby
+#done
+
+
 # next lets set some enviromental/shell pref stuff up
 # setopt NOHUP
 #setopt NOTIFY
@@ -34,14 +51,13 @@ zmodload -ap zsh/mapfile mapfile
 # Autoload zargs
 autoload -U zargs
 
-PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
 #TZ="America/New_York"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=2000
 SAVEHIST=2000
 HOSTNAME="`hostname`"
-PAGER='less'
-EDITOR='emacs'
+
     autoload colors zsh/terminfo
     if [[ "$terminfo[colors]" -ge 8 ]]; then
    colors
@@ -162,11 +178,16 @@ zstyle '*' single-ignored show
 # prompt
 export PS1="$(print '%{\e[1;32m%}%T%{\e[0m%}') %B%n%b@%m:%~%# "
 
-export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/mysql5/bin:$PATH
+
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-# custom functions
+#load custom modules
+
+for module in $FURBY_MODULES; do
+  [[ -f $ZSH/zsh/modules/$module.furby ]] & source $ZSH/zsh/modules/$module.furby
+done
+
 
 # find all TODO in project (recursive)
 # if you will do it in / you will feel pain and suffering
@@ -175,43 +196,10 @@ fur-todo() {
   zargs **/*  -- grep TODO | awk '{print $0 "\n" }'
 }
 
-# bundler shorts
 
-bi() {
-  bundle install
-}
 
-be() {
-  bundle exec $*
-}
 
-# ruby & rails
-## rake
 
-fur-spec() {
-  if [[ $* == "" ]]; then
-    bundle exec rake spec
-  else
-    bundle exec rake spec SPEC=$*
-  fi
-}
 
-# git
-
-gstat(){
-  git status $*
-}
-
-gdiff() {
-  git diff $*
-}
-
-gci(){
-  git commit $*
-}
-
-gpush(){
-  git push $*
-}
 
 #TODO expand this initial config ;) !

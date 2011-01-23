@@ -1,2 +1,9 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq-default indent-tabs-mode nil)
+
+(when window-system
+  (speedbar t))
+
+(custom-set-variables
+ '(speedbar-show-unknown-files t)
+)

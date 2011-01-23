@@ -1,0 +1,7 @@
+fur-spec() {
+  if [[ $* == "" ]]; then
+    bundle exec rake spec
+  else
+    bundle exec rake spec SPEC=$*
+  fi
+}

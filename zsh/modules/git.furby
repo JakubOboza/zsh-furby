@@ -1,0 +1,17 @@
+# git
+
+gstat(){
+  git status $*
+}
+
+gdiff() {
+  git diff $*
+}
+
+gci(){
+  git commit $*
+}
+
+gpush(){
+  git push $*
+}

@@ -1,0 +1,9 @@
+# bundler shorts
+
+bi() {
+  bundle install
+}
+
+be() {
+  bundle exec $*
+}
