@@ -1,0 +1,3 @@
+fur-port-clear(){
+  port -f uninstall inactive
+}
