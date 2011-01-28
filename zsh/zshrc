@@ -8,7 +8,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/mysql5/bin:$PATH
 PAGER='less'
 EDITOR='emacs'
 
-FURBY_MODULES=(git bundler rspec ports)
+FURBY_MODULES=(git bundler rspec ports osx)
 
 # source .furby, extra config settings, variables etc.
 if [[  -f ~/.furby  ]]; then
