@@ -1,3 +1,7 @@
-fur-port-clear(){
-  port -f uninstall inactive
+port-uninstall-inactive(){
+  sudo port -f uninstall inactive
+}
+
+port-uninstall-with-deps(){
+  sudo port uninstall --follow-dependents $*
 }
