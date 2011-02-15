@@ -7,3 +7,9 @@
 (custom-set-variables
  '(speedbar-show-unknown-files t)
 )
+
+;; setup erlang mode
+;; add the location of the elisp files to the load-path
+(setq load-path (cons  "/opt/local/lib/erlang/lib/tools-2.6.6.2/emacs"
+         load-path))
+(require 'erlang-start)
