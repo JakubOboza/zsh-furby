@@ -187,6 +187,10 @@ for module in $FURBY_MODULES; do
   [[ -f $ZSH/zsh/modules/$module.furby ]] & source $ZSH/zsh/modules/$module.furby
 done
 
+#for dirname in $fpath ; do
+#  autoload $dirname/*(.x:t)
+#done
+
 
 # find all TODO in project (recursive)
 # if you will do it in / you will feel pain and suffering
