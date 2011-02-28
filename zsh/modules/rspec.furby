@@ -5,3 +5,8 @@ fur-spec() {
     bundle exec rake spec SPEC=$*
   fi
 }
+
+# Just for typo problems late at work
+rape(){
+  rake $*
+}
