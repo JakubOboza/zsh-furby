@@ -13,3 +13,8 @@
 (setq load-path (cons  "/opt/local/lib/erlang/lib/tools-2.6.6.2/emacs"
          load-path))
 (require 'erlang-start)
+
+(autoload 'haskell-mode "haskell-mode"
+   "Major mode for editing Haskell scripts." t)
+(autoload 'literate-haskell-mode "haskell-mode"
+   "Major mode for editing literate Haskell scripts." t)
