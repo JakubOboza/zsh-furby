@@ -18,3 +18,5 @@
    "Major mode for editing Haskell scripts." t)
 (autoload 'literate-haskell-mode "haskell-mode"
    "Major mode for editing literate Haskell scripts." t)
+
+(setq make-backup-files nil)
