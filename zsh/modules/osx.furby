@@ -12,6 +12,7 @@ git clean -d -f
 STRINGS=nextstep/Cocoa/Emacs.base/Contents/Resources/English.lproj/InfoPlist.strings
 git remote update
 git rebase origin/master
+`autogen.sh`
 DATE=`date -u +"%Y-%m-%d %H:%M:%S %Z"`
 DAY=`date -u +"%Y-%m-%d"`
 ORIG=`grep ^AC_INIT configure.in`
