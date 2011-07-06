@@ -14,6 +14,9 @@
          load-path))
 (require 'erlang-start)
 
+(load "/Users/kuba/Workspace/Haskell/haskellmode-emacs/haskell-site-file")
+
+
 (autoload 'haskell-mode "haskell-mode"
    "Major mode for editing Haskell scripts." t)
 (autoload 'literate-haskell-mode "haskell-mode"
