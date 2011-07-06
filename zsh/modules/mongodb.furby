@@ -1,0 +1,5 @@
+build-mongo(){
+  `scons --clean`
+  `git pull`
+  `scons --prefix /Users/kuba/Workspace/Mongo/mongo-build --full install`
+}
