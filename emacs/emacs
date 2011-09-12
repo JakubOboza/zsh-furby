@@ -8,9 +8,11 @@
  '(speedbar-show-unknown-files t)
 )
 
+#(global-linum-mode 1)
+
 ;; setup erlang mode
 ;; add the location of the elisp files to the load-path
-(setq load-path (cons  "/opt/local/lib/erlang/lib/tools-2.6.6.2/emacs"
+(setq load-path (cons  "/opt/local/lib/erlang/lib/tools-2.6.6.4/emacs"
          load-path))
 (require 'erlang-start)
 
