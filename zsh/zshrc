@@ -79,18 +79,11 @@ unsetopt ALL_EXPORT
 # # --------------------------------------------------------------------
 # # aliases
 # # --------------------------------------------------------------------
-alias slrn="slrn -n"
 alias man='LC_ALL=C LANG=C man'
-alias f=finger
 alias ll='ls -al'
 #alias ls='ls -G'
 alias offlineimap-tty='offlineimap -u TTY.TTYUI'
 alias hnb-partecs='hnb $HOME/partecs/partecs-hnb.xml'
-alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
-alias dmesg="sudo dmesg"
-#if [[ $HOSTNAME == "kamna" ]] {
-#	alias emacs='emacs -l ~/.emacs.kamna'
-#}
 
 # alias	=clear
 stty erase ^H &>/dev/null
@@ -175,7 +168,7 @@ zstyle '*' single-ignored show
 
 
 # prompt
-export PS1="$(print '%{\e[1;32m%}%T%{\e[0m%}') %B%n%b@%m:%~%# "
+export PS1="$(print '%{\e[1;32m%}%T%{\e[0m%}') %B%n%b@%m:%~ λ "
 
 
 
@@ -187,11 +180,6 @@ for module in $FURBY_MODULES; do
   [[ -f $ZSH/zsh/modules/$module.furby ]] & source $ZSH/zsh/modules/$module.furby
 done
 
-#for dirname in $fpath ; do
-#  autoload $dirname/*(.x:t)
-#done
-
-
 # find all TODO in project (recursive)
 # if you will do it in / you will feel pain and suffering
 
@@ -200,9 +188,5 @@ fur-todo() {
 }
 
 
-
-
-
-
-
 #TODO expand this initial config ;) !
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
