@@ -1,4 +1,4 @@
 build-mongo(){
   git pull
-  scons --prefix /Users/joboza/Workspace/Mongo/mongo-build --64 --full install
+  scons --prefix /Users/joboza/Workspace/Mongo/mongo-build install
 }
